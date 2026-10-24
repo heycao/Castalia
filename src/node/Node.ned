@@ -12,7 +12,7 @@
 
 package node;
 
-import node.mobilityManager;
+import node.mobilityManager.*;
 
 // The sensor node module. Connects to the wireless channel in order to communicate 
 // with other nodes. Connects to psysical processes so it can sample them.
@@ -45,8 +45,8 @@ module Node {
 	ResourceManager: node.resourceManager.ResourceManager;
 	SensorManager: node.sensorManager.SensorManager {
 	 gates:
-		fromNodeContainerModule[sizeof(toPhysicalProcess)];
-		toNodeContainerModule[sizeof(toPhysicalProcess)];
+		fromNodeContainerModule[sizeof(parent.toPhysicalProcess)];
+		toNodeContainerModule[sizeof(parent.toPhysicalProcess)];
 	} 
 	Communication: node.communication.CommunicationModule;
 	Application: <ApplicationName> like node.application.iApplication;

@@ -10,11 +10,7 @@
 //*                                                                          *  
 //****************************************************************************/
 
-cplusplus {{
-#include "node/communication/mac/MacPacket_m.h"
-}}
-
-class MacPacket;
+import node.communication.mac.MacPacket;
 
 enum TunableMacFrameTypeDef {
 	DATA_FRAME = 1;

@@ -10,11 +10,7 @@
 //*                                                                          *  
 //****************************************************************************/
 
-cplusplus {{
-#include "node/communication/mac/MacPacket_m.h"
-}}
-
-class MacPacket;
+import node.communication.mac.MacPacket;
 
 enum Mac802154Packet_type {
 	MAC_802154_BEACON_PACKET = 1001;
